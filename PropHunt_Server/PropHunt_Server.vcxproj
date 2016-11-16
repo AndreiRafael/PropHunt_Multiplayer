@@ -40,10 +40,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LibraryPath>$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Users\Andrei\Documents\Visual Studio 2013\Projects\PropHunt\Shared;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\..\Shared;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Users\Andrei\Documents\Visual Studio 2013\Projects\PropHunt\Shared;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\..\Shared;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

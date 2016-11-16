@@ -10,14 +10,17 @@ SOCKET serverSocket;
 
 class Player{
 public:
-	bool connected;//esse slot já está tomado?
-	sockaddr_in address;//o endereço e infos do cara
+	bool connected;//Verify if a slot is already taken
+	sockaddr_in address;//Adress and player info
 };
 
-Player players[NUM_PLAYERS];//o array de players
-//funçoes relacionadas ao player
+Player players[NUM_PLAYERS];//players array
+//player functions
 
-//retorna um ID para ser usado pelo player, -1 se não houver mais espaço
+/// <summary>
+/// <para>Returns a ID to be used by a Player</para>
+/// <para>-1 if there is no more space</para>
+/// </summary>
 int GetNewID(){
 	for (int i = 0; i < NUM_PLAYERS; i++){
 		if (!players[i].connected)
@@ -30,9 +33,12 @@ bool IsNewPlayer(sockaddr_in cliente){
 	for (int i = 0; i < GetNewID(); i++){
 		
 	}
+	return false;
 }
 
-//conecta o player nesse servidor
+/// <summary>
+/// <para>Connect player in this server</para>
+/// </summary>
 void ConnectPlayer(sockaddr_in cliente){
 	int id = GetNewID();
 	if (id >= 0){//caso o jogo não esteja cheio
@@ -47,7 +53,9 @@ void ConnectPlayer(sockaddr_in cliente){
 
 //funções para o server
 
-//Retorna true se todos jogadores conectaram
+/// <summary>
+/// <para>Return true when all player are connected</para>
+/// </summary>
 bool GameFull(){
 	return GetNewID() == -1;
 }

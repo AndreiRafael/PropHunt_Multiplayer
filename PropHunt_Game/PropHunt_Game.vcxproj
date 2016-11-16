@@ -40,13 +40,13 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)/HFLib;$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)/src/Components/;$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)deps/include/;$(IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)/HFLib;$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)/src/Components/;$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)deps/include/;$(SolutionDir)\..\Shared;$(IncludePath)</IncludePath>
     <ReferencePath>$(VC_ReferencesPath_x86)</ReferencePath>
     <LibraryPath>$(ProjectDir)deps/lib/;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LibraryPath>$(ProjectDir)deps/lib/;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Users\Andrei\Documents\Visual Studio 2013\Projects\PropHunt\Shared;$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)deps/include/;$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)/HFLib;$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)/src/Components;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\..\Shared;$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)deps/include/;$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)/HFLib;$(VC_IncludePath)$(WindowsSDK_IncludePath)$(ProjectDir)/src/Components;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
