@@ -1,0 +1,15 @@
+/*Hifire Helper Library*/
+#pragma once
+#include "GameManager.h"
+#include "Counter.h"
+#include "SceneManager.h"
+#include "Rigidbody.h"
+#include "Renderer.h"
+#include "HudRenderer.h"
+#include "Text.h"
+#include "HudText.h"
+#include "AudioSource.h"
+#include "Animator.h"
+#include "BoxCollider.h"
+#include "Button.h"
+#include "TextureManager.h"
