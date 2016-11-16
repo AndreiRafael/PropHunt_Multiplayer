@@ -1,0 +1,51 @@
+﻿  SceneManager.cpp
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(52): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(59): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(66): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(76): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\src\hifire\scenemanager.cpp(19): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\src\hifire\scenemanager.cpp(24): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\src\hifire\scenemanager.cpp(47): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\src\hifire\scenemanager.cpp(61): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\src\hifire\scenemanager.cpp(71): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\src\hifire\scenemanager.cpp(83): warning C4018: '<' : signed/unsigned mismatch
+  GameObject.cpp
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(52): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(59): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(66): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(76): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\renderer.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\renderer.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\boxcollider.h(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\boxcollider.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+  Source.cpp
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\rigidbody.h(27): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\rigidbody.h(29): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(52): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(59): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(66): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(76): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\renderer.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\renderer.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\hudrenderer.h(30): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\hudrenderer.h(31): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\animator.h(94): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\boxcollider.h(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\boxcollider.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\input.h(123): warning C4244: '=' : conversion from 'float' to 'Sint32', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\button.h(42): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\src\components\udpcomponent.h(6): fatal error C1083: Cannot open include file: 'PropHuntProtocol.h': No such file or directory
+  Generating Code...
+  Compiling...
+  Input.cpp
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\input.h(123): warning C4244: '=' : conversion from 'float' to 'Sint32', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\src\hifire\input.cpp(29): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\src\hifire\input.cpp(30): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\src\hifire\input.cpp(147): warning C4244: 'return' : conversion from 'Sint32' to 'float', possible loss of data
+  GameManager.cpp
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\input.h(123): warning C4244: '=' : conversion from 'float' to 'Sint32', possible loss of data
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(52): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(59): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(66): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\texturemanager.h(76): warning C4018: '<' : signed/unsigned mismatch
+  Generating Code...
