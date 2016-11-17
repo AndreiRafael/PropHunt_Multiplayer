@@ -1,7 +1,6 @@
 #pragma once
 #include <HifireLibrary.h>
 
-class SC_Gameplay;
 class Cursor : public Component{
 private:
 

@@ -1,7 +1,30 @@
-﻿Build started 16/11/2016 21:51:05.
-     1>Project "C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Game\PropHunt_Game.vcxproj" on node 3 (Build target(s)).
-     1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\Debug\PropHunt_Game.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib SDL2_ttf.lib SDL2_mixer.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\Debug\PropHunt_Game.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\Debug\PropHunt_Game.lib" /MACHINE:X86 Debug\Source.obj
+﻿Build started 17/11/2016 19:00:20.
+     1>Project "C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Game\PropHunt_Game.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\Source.cpp
+         Source.cpp
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\rigidbody.h(27): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\rigidbody.h(29): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\texturemanager.h(52): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\texturemanager.h(59): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\texturemanager.h(66): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\texturemanager.h(76): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\renderer.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\renderer.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\hudrenderer.h(30): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\hudrenderer.h(31): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\animator.h(94): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\boxcollider.h(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\boxcollider.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\input.h(123): warning C4244: '=' : conversion from 'float' to 'Sint32', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\hflib\button.h(42): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\src\components\udpcomponent.h(27): warning C4101: 'porta' : unreferenced local variable
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\src\components\udpmovement.h(20): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\src\components\udpmovement.h(24): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\src\components\udpmovement.h(28): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\rafael\documents\visual studio 2013\projects\prophunt_multiplayer\prophunt_game\src\components\udpmovement.h(32): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\Debug\PropHunt_Game.exe" /INCREMENTAL /NOLOGO ws2_32.lib SDL2.lib SDL2main.lib SDL2_image.lib SDL2_ttf.lib SDL2_mixer.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\Debug\PropHunt_Game.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\Debug\PropHunt_Game.lib" /MACHINE:X86 Debug\Source.obj
          Debug\AudioMixer.obj
          Debug\Counter.obj
          Debug\GameManager.obj
@@ -9,17 +32,9 @@
          Debug\Input.obj
          Debug\SceneManager.obj
          Debug\TextureManager.obj
-     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
-     1>Source.obj : error LNK2019: unresolved external symbol __imp__ioctlsocket@12 referenced in function "private: virtual void __thiscall UDPComponent::Update(void)" (?Update@UDPComponent@@EAEXXZ)
-     1>Source.obj : error LNK2019: unresolved external symbol __imp__htons@4 referenced in function "private: void __thiscall UDPComponent::ConfigurarRede(void)" (?ConfigurarRede@UDPComponent@@AAEXXZ)
-     1>Source.obj : error LNK2019: unresolved external symbol __imp__recv@16 referenced in function "private: virtual void __thiscall UDPComponent::Update(void)" (?Update@UDPComponent@@EAEXXZ)
-     1>Source.obj : error LNK2019: unresolved external symbol __imp__sendto@24 referenced in function "private: virtual void __thiscall UDPComponent::Update(void)" (?Update@UDPComponent@@EAEXXZ)
-     1>Source.obj : error LNK2019: unresolved external symbol __imp__socket@12 referenced in function "private: void __thiscall UDPComponent::ConfigurarRede(void)" (?ConfigurarRede@UDPComponent@@AAEXXZ)
-     1>Source.obj : error LNK2019: unresolved external symbol __imp__WSAStartup@8 referenced in function "private: void __thiscall UDPComponent::ConfigurarRede(void)" (?ConfigurarRede@UDPComponent@@AAEXXZ)
-     1>Source.obj : error LNK2019: unresolved external symbol __imp__inet_pton@12 referenced in function "private: void __thiscall UDPComponent::ConfigurarRede(void)" (?ConfigurarRede@UDPComponent@@AAEXXZ)
-     1>C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\Debug\PropHunt_Game.exe : fatal error LNK1120: 7 unresolved externals
-     1>Done Building Project "C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Game\PropHunt_Game.vcxproj" (Build target(s)) -- FAILED.
+         PropHunt_Game.vcxproj -> C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\Debug\PropHunt_Game.exe
+     1>Done Building Project "C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Game\PropHunt_Game.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.31
+Time Elapsed 00:00:01.89

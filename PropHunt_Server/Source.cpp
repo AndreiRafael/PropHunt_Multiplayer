@@ -51,7 +51,7 @@ void ConnectPlayer(sockaddr_in cliente){
 	}
 }
 
-//funções para o server
+//Server functions
 
 /// <summary>
 /// <para>Return true when all player are connected</para>
@@ -80,11 +80,11 @@ int main(){
 	while (!GameFull()){
 		char buffer[MSG_TAM];
 		sockaddr_in novoCliente;
-		int tam = sizeof(novoCliente);//tamanho
+		int tam = sizeof(novoCliente);//Size
 
 		int r;
 		r = recvfrom(serverSocket, buffer, MSG_TAM, NULL, (SOCKADDR*)&novoCliente, &tam);
-		if (r != SOCKET_ERROR){//deu certo
+		if (r != SOCKET_ERROR){//It works!
 			int request = *((int*)buffer);
 			if (request == 321)
 				ConnectPlayer(novoCliente);
