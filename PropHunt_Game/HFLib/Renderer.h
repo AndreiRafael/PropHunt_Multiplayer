@@ -46,6 +46,11 @@ public:
 		DivideTiles(1, 1);
 	}
 
+	void SetTexture(int id){
+		textureID = id;
+		DivideTiles(1, 1);
+	}
+
 	void DivideTiles(int horizontalTiles, int verticalTiles){
 		imgRect.w = TEXTURES->GetTextureByID(textureID)->w / horizontalTiles;
 		imgRect.h = TEXTURES->GetTextureByID(textureID)->h / verticalTiles;
