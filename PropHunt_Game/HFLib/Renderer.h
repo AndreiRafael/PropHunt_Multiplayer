@@ -22,8 +22,8 @@ private:
 	}
 
 	void Update(){
-		destRect.x = (int)-gameObject->scene->camera.x + (int)gameObject->position.x + GAME_MANAGER->hWidth - (int)gameObject->scale.x * imgRect.w / 2;
-		destRect.y = (int)gameObject->scene->camera.y - (int)gameObject->position.y + GAME_MANAGER->hHeight - (int)gameObject->scale.y * imgRect.h / 2;
+		destRect.x = (int)(-gameObject->scene->camera.x + gameObject->position.x) + GAME_MANAGER->hWidth - (int)(gameObject->scale.x * imgRect.w / 2);
+		destRect.y = (int)(gameObject->scene->camera.y - gameObject->position.y) + GAME_MANAGER->hHeight - (int)(gameObject->scale.y * imgRect.h / 2);
 		destRect.w = imgRect.w * gameObject->scale.x;
 		destRect.h = imgRect.h * gameObject->scale.y;
 	}

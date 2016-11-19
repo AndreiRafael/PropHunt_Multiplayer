@@ -1,24 +1,56 @@
 ﻿  Source.cpp
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\Rigidbody.h(27): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\Rigidbody.h(29): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\TextureManager.h(52): warning C4018: '<' : signed/unsigned mismatch
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\TextureManager.h(59): warning C4018: '<' : signed/unsigned mismatch
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\TextureManager.h(66): warning C4018: '<' : signed/unsigned mismatch
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\TextureManager.h(76): warning C4018: '<' : signed/unsigned mismatch
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\Renderer.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\Renderer.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\HudRenderer.h(30): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\HudRenderer.h(31): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\Animator.h(94): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\BoxCollider.h(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\BoxCollider.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\Input.h(123): warning C4244: '=' : conversion from 'float' to 'Sint32', possible loss of data
-c:\users\andrei\documents\visual studio 2013\projects\prophunt\prophunt_game\hflib\Button.h(42): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-C:\Users\Andrei\Documents\Visual Studio 2013\Projects\PropHunt\PropHunt_Game\src\Components\UDPComponent.h(27): warning C4101: 'porta' : unreferenced local variable
-C:\Users\Andrei\Documents\Visual Studio 2013\Projects\PropHunt\PropHunt_Game\src\Components\UDPMovement.h(20): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-C:\Users\Andrei\Documents\Visual Studio 2013\Projects\PropHunt\PropHunt_Game\src\Components\UDPMovement.h(24): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-C:\Users\Andrei\Documents\Visual Studio 2013\Projects\PropHunt\PropHunt_Game\src\Components\UDPMovement.h(28): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-C:\Users\Andrei\Documents\Visual Studio 2013\Projects\PropHunt\PropHunt_Game\src\Components\UDPMovement.h(32): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\Rigidbody.h(27): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\Rigidbody.h(29): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\TextureManager.h(52): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\TextureManager.h(59): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\TextureManager.h(66): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\TextureManager.h(76): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\Renderer.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\Renderer.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\HudRenderer.h(30): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\HudRenderer.h(31): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\Animator.h(94): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\BoxCollider.h(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\BoxCollider.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\Input.h(123): warning C4244: '=' : conversion from 'float' to 'Sint32', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\Button.h(42): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPComponent.h(28): warning C4101: 'porta' : unreferenced local variable
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(19): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(22): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(26): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(30): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(34): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+  GameManager.cpp
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\Input.h(123): warning C4244: '=' : conversion from 'float' to 'Sint32', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\TextureManager.h(52): warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\TextureManager.h(59): warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\TextureManager.h(66): warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\TextureManager.h(76): warning C4018: '<' : signed/unsigned mismatch
+  GameObject.cpp
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\TextureManager.h(52): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\TextureManager.h(59): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\TextureManager.h(66): warning C4018: '<' : signed/unsigned mismatch
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\TextureManager.h(76): warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\Renderer.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\Renderer.h(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\BoxCollider.h(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\BoxCollider.h(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+  Input.cpp
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\Input.h(123): warning C4244: '=' : conversion from 'float' to 'Sint32', possible loss of data
+src\Hifire\Input.cpp(29): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+src\Hifire\Input.cpp(30): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+src\Hifire\Input.cpp(147): warning C4244: 'return' : conversion from 'Sint32' to 'float', possible loss of data
+  SceneManager.cpp
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\TextureManager.h(52): warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\TextureManager.h(59): warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\TextureManager.h(66): warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\HFLib\TextureManager.h(76): warning C4018: '<' : signed/unsigned mismatch
+src\Hifire\SceneManager.cpp(19): warning C4018: '<' : signed/unsigned mismatch
+src\Hifire\SceneManager.cpp(24): warning C4018: '<' : signed/unsigned mismatch
+src\Hifire\SceneManager.cpp(47): warning C4018: '<' : signed/unsigned mismatch
+src\Hifire\SceneManager.cpp(61): warning C4018: '<' : signed/unsigned mismatch
+src\Hifire\SceneManager.cpp(71): warning C4018: '<' : signed/unsigned mismatch
+src\Hifire\SceneManager.cpp(83): warning C4018: '<' : signed/unsigned mismatch
   Generating code
   Finished generating code
-  PropHunt_Game.vcxproj -> C:\Users\Andrei\Documents\Visual Studio 2013\Projects\PropHunt\PropHunt_Server\Release\PropHunt_Game.exe
+  PropHunt_Game.vcxproj -> C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Server\Release\PropHunt_Game.exe

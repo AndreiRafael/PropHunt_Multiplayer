@@ -95,6 +95,11 @@ public:
 		return nullptr;
 	}
 
+	//Returns a gameObject Component by its index
+	Component* GetRawComponent(int index){
+		return (components[index]);
+	}
+
 	template<class T>
 	//Adds a Component to the gameObject
 	void AddComponent(){

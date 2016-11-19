@@ -94,10 +94,12 @@ int main(){
 			std::cout << "Aguardando conexao..." << std::endl;
 		}
 	}
+	//seta o socket para o modo não-bloqueante
+	//Met le socket en mode non bloquant
 	u_long iMode = 1;
 	ioctlsocket(serverSocket, FIONBIO, &iMode);
+	std::cout << "Jogo em andamento" << std::endl;
 	while (true){
-		std::cout << "Jogo em andamento" << std::endl;
 		char buffer[MSG_TAM];
 
 		int r;

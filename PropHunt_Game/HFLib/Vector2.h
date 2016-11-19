@@ -109,4 +109,15 @@ public:
 	static float Distance(Vector2 vec1, Vector2 vec2){
 		return sqrtf(SqrDistance(vec1, vec2));
 	}
+
+	static Vector2 Lerp(Vector2& vec1, Vector2& vec2, float factor){
+		factor = factor > 1.0f ? 1.0f : factor;
+		factor = factor < 0.0f ? 0.0f : factor;
+		return Vector2::LerpUnclamped(vec1, vec2, factor);
+	}
+
+	static Vector2 LerpUnclamped(Vector2& vec1, Vector2& vec2, float factor){
+		Vector2 newVec = vec1 * (1.0f - factor) + vec2 * factor;
+		return newVec;
+	}
 };

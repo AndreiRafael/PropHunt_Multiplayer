@@ -5,6 +5,7 @@
 class UDPMovement : public Component{
 public:
 	UDPComponent* udpComp;
+	float speed = 50.0f;
 
 private:
 
@@ -15,21 +16,22 @@ private:
 
 	//Update is called once per frame
 	void Update(){
+		gameObject->scene->camera = Vector2::Lerp(gameObject->scene->camera, gameObject->position, 2.0f * COUNTER->DeltaTime());
 		bool moveu = false;
 		if (HF_INPUT->GetButton(hfb_down)){
-			gameObject->Translate(0.0f, -5.0f * COUNTER->DeltaTime());
+			gameObject->Translate(0.0f, -speed * COUNTER->DeltaTime());
 			moveu = true;
 		}
 		if (HF_INPUT->GetButton(hfb_up)){
-			gameObject->Translate(0.0f, 5.0f * COUNTER->DeltaTime());
+			gameObject->Translate(0.0f, speed * COUNTER->DeltaTime());
 			moveu = true;
 		}
 		if (HF_INPUT->GetButton(hfb_left)){
-			gameObject->Translate(-5.0f * COUNTER->DeltaTime(), 0.0f);
+			gameObject->Translate(-speed * COUNTER->DeltaTime(), 0.0f);
 			moveu = true;
 		}
 		if (HF_INPUT->GetButton(hfb_right)){
-			gameObject->Translate(5.0f * COUNTER->DeltaTime(), 0.0f);
+			gameObject->Translate(speed * COUNTER->DeltaTime(), 0.0f);
 			moveu = true;
 		}
 		if (moveu){

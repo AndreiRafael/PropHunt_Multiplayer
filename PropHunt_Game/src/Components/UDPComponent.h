@@ -9,6 +9,7 @@ public:
 	SOCKET meuSocket;
 	sockaddr_in server;
 	int tamanhoServer;
+	GameObject** gameObjects;
 
 	int meuID = -1;//o ID do cliente
 private:
@@ -52,6 +53,12 @@ private:
 				meuID = *((int*)buffer);
 				u_long iMode = 1;
 				ioctlsocket(meuSocket, FIONBIO, &iMode);
+				for (int i = 0; i < NUM_PLAYERS; i++){
+					if (i != meuID){
+						gameObjects[i]->GetRawComponent(0)->SetEnabled(false);
+					}
+				}
+
 			}
 		}
 		else{
@@ -75,7 +82,8 @@ private:
 					PositionCommand positionMsg;
 					if (r != SOCKET_ERROR){
 						positionMsg = *((PositionCommand*)buffer);
-						std::cout << "Recebi uma posicao: (" << positionMsg.x << ", " << positionMsg.y << ")" << std::endl;
+						gameObjects[positionMsg.playerID]->position.x = positionMsg.x;
+						gameObjects[positionMsg.playerID]->position.y = positionMsg.y;
 						//fazer algo
 					}
 					break;
