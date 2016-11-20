@@ -6,6 +6,7 @@
 #include <string>
 #include <TextureManager.h>
 
+
 GameManager* GameManager::instance = nullptr;
 
 GameManager::GameManager(){
@@ -44,6 +45,14 @@ void GameManager::Initialize(char* p_title, int p_x, int p_y, SDL_WindowFlags fl
 	height = p_y;
 	hHeight = (int)((float)height / 2);
 	hWidth = (int)((float)width / 2);
+}
+
+
+void GameManager::Initialize(char* p_title, int p_x, int p_y, SDL_WindowFlags flag, const char* LVL)
+{
+	Initialize(p_title, p_x, p_y, flag);
+	if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, LVL)) std::cout << "Houve um erro ao aplicar o AntiAliasing."<<std::endl;
+	else std::cout << "AntiAliasing x"<<LVL<<std::endl;
 }
 
 void GameManager::Initialize(char* p_title, SDL_WindowFlags flag){

@@ -3,6 +3,7 @@
 #include <UDPComponent.h>
 #include <UDPMovement.h>
 #include <rafael.h>
+#include <DynamicTexture.h>
 
 class SC_Gameplay : public SceneManager{
 public:
@@ -30,6 +31,7 @@ void SC_Gameplay::ConfigureObjects(){
 		hunters[i] = new GameObject();
 		hunters[i]->AddComponent<UDPMovement>();
 		hunters[i]->AddComponent<Renderer>();
+		hunters[i]->AddComponent<DynamicTexture>();
 	}
 
 	cenario->AddComponent<Renderer>();

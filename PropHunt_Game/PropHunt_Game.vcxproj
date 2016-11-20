@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Components\Cursor.h" />
+    <ClInclude Include="src\Components\DynamicTexture.h" />
     <ClInclude Include="src\Components\rafael.h" />
     <ClInclude Include="src\Components\UDPComponent.h" />
     <ClInclude Include="src\Components\UDPMovement.h" />

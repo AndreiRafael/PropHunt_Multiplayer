@@ -7,7 +7,7 @@ int main(int argc, char** argv)
 {
 	//SDL_DisplayMode display;
 	//pra fazer auto-resize depois
-	GAME_MANAGER->Initialize("Multiplayer ", 800, 600, SDL_WINDOW_OPENGL);
+	GAME_MANAGER->Initialize("Multiplayer ", 800, 600, SDL_WINDOW_OPENGL, "2");
 	HF_INPUT->LoadDefaultButtons();
 	
 	GAME_MANAGER->LoadScene<SC_Gameplay>();

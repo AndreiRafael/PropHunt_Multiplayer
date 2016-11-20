@@ -24,6 +24,7 @@ public:
 	~GameManager();
 
 	void Initialize(char* p_title, int p_x, int p_y, SDL_WindowFlags flag);
+	void Initialize(char* p_title, int p_x, int p_y, SDL_WindowFlags flag, const char* LVL);
 	void Initialize(char* p_title, SDL_WindowFlags flag);
 	void Begin();
 	void Update();
