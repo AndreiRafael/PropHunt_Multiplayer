@@ -15,6 +15,7 @@ private:
 
 	void Awake(){
 		imgRect = { 0, 0, 0, 0 };
+		gameObject->SetRenderer(this);
 	}
 
 	void Start(){
@@ -22,13 +23,14 @@ private:
 	}
 
 	void Update(){
-		destRect.x = (int)(-gameObject->scene->camera.x + gameObject->position.x) + GAME_MANAGER->hWidth - (int)(gameObject->scale.x * imgRect.w / 2);
-		destRect.y = (int)(gameObject->scene->camera.y - gameObject->position.y) + GAME_MANAGER->hHeight - (int)(gameObject->scale.y * imgRect.h / 2);
-		destRect.w = imgRect.w * gameObject->scale.x;
-		destRect.h = imgRect.h * gameObject->scale.y;
+		
 	}
 
 	void Render(){
+		destRect.x = (int)-gameObject->scene->camera.x + (int)(gameObject->position.x + (float)GAME_MANAGER->hWidth - (gameObject->scale.x * (float)imgRect.w / 2.0f));
+		destRect.y = (int)gameObject->scene->camera.y + (int)(-gameObject->position.y + (float)GAME_MANAGER->hHeight - (gameObject->scale.y * (float)imgRect.h / 2.0f));
+		destRect.w = (int)((float)imgRect.w * gameObject->scale.x);
+		destRect.h = (int)((float)imgRect.h * gameObject->scale.y);
 		if (gameObject->position.x > gameObject->scene->camera.x - GAME_MANAGER->hWidth - destRect.w) {
 			if (gameObject->position.x < gameObject->scene->camera.x + GAME_MANAGER->hWidth + destRect.w) {
 				if (gameObject->position.y > gameObject->scene->camera.y - GAME_MANAGER->hHeight - destRect.h) {
@@ -59,5 +61,13 @@ public:
 	void SetTileCoordinates(int x, int y){
 		imgRect.x = x * imgRect.w;
 		imgRect.y = y * imgRect.h;
+	}
+
+	int GetWidth(){
+		return imgRect.w;
+	}
+
+	int GetHeight(){
+		return imgRect.h;
 	}
 };

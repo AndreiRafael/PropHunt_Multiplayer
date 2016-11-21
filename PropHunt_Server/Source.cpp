@@ -96,8 +96,8 @@ int main(){
 	}
 	//seta o socket para o modo não-bloqueante
 	//Met le socket en mode non bloquant
-	u_long iMode = 1;
-	ioctlsocket(serverSocket, FIONBIO, &iMode);
+	//u_long iMode = 1;
+	//ioctlsocket(serverSocket, FIONBIO, &iMode);
 	std::cout << "Jogo em andamento" << std::endl;
 	while (true){
 		char buffer[MSG_TAM];
@@ -122,7 +122,6 @@ int main(){
 				r = recv(serverSocket, (char*)&buffer, 50, NULL);
 				if (r != SOCKET_ERROR){
 					positionMsg = *((PositionCommand*)buffer);
-					std::cout << "Recebi uma posicao: (" << positionMsg.x << ", " << positionMsg.y << ")" << std::endl;
 				}
 				break;
 			case PH_CMD::sprite:
@@ -139,20 +138,24 @@ int main(){
 				break;
 			}
 			for (int i = 0; i < NUM_PLAYERS; i++){//manda os comandos para os outros players
-				if (i != msg.playerID){
+				if (i != msg.playerID && msg.playerID < NUM_PLAYERS){
 					r = sendto(serverSocket, (const char*)&msg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
 					switch (msg.commandType){
 					case PH_CMD::team:
-						r = sendto(serverSocket, (const char*)&teamMsg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
+						if (teamMsg.playerID < NUM_PLAYERS)
+							r = sendto(serverSocket, (const char*)&teamMsg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
 						break;
 					case PH_CMD::position:
-						r = sendto(serverSocket, (const char*)&positionMsg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
+						if (positionMsg.playerID < NUM_PLAYERS)
+							r = sendto(serverSocket, (const char*)&positionMsg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
 						break;
 					case PH_CMD::sprite:
-						r = sendto(serverSocket, (const char*)&spriteMsg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
+						if (spriteMsg.playerID < NUM_PLAYERS)
+							r = sendto(serverSocket, (const char*)&spriteMsg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
 						break;
 					case PH_CMD::life:
-						r = sendto(serverSocket, (const char*)&lifeMsg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
+						if (lifeMsg.playerID < NUM_PLAYERS)
+							r = sendto(serverSocket, (const char*)&lifeMsg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
 						break;
 					}
 				}

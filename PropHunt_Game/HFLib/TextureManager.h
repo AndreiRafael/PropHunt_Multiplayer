@@ -46,6 +46,9 @@ public:
 			textures->at(textures->size() - 1)->w = surface->w;
 			SDL_FreeSurface(surface);
 		}
+		else{
+			std::cout << "Error loading texture: " << name.c_str() << std::endl;
+		}
 	}
 
 	SDL_Texture* GetSDLTextureByID(int texID) {

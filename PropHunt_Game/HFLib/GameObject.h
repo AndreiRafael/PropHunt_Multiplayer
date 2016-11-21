@@ -131,7 +131,7 @@ public:
 	BoxCollider* GetCollider();
 	void SetCollider(BoxCollider*);
 	Renderer* GetRenderer();
-	void SetRenderer();
+	void SetRenderer(Renderer* renderer);
 
 	void ClearComponents();
 

@@ -1,40 +1,53 @@
 #pragma once
 #include <HifireLibrary.h>
 #include <PropHuntProtocol.h>
+#include "../InputConfig.h"
 
 class UDPMovement : public Component{
 public:
 	UDPComponent* udpComp;
-	float speed = 50.0f;
+	BoxCollider* coll;
+	Vector2 prevPos;
+	float speed = 200.0f;
 
 private:
 
 	//Start is called at the start of a scene
 	void Start(){
-
+		coll = GetComponent<BoxCollider>();
+		prevPos = gameObject->position;
 	}
 
 	//Update is called once per frame
 	void Update(){
 		gameObject->scene->camera = Vector2::Lerp(gameObject->scene->camera, gameObject->position, 2.0f * COUNTER->DeltaTime());
 		bool moveu = false;
-		if (HF_INPUT->GetButton(hfb_down)){
+		if (HF_INPUT->GetButton(hfInput::down)){
 			gameObject->Translate(0.0f, -speed * COUNTER->DeltaTime());
 			moveu = true;
 		}
-		if (HF_INPUT->GetButton(hfb_up)){
+		if (HF_INPUT->GetButton(hfInput::up)){
 			gameObject->Translate(0.0f, speed * COUNTER->DeltaTime());
 			moveu = true;
 		}
-		if (HF_INPUT->GetButton(hfb_left)){
+		if (HF_INPUT->GetButton(hfInput::left)){
 			gameObject->Translate(-speed * COUNTER->DeltaTime(), 0.0f);
 			moveu = true;
 		}
-		if (HF_INPUT->GetButton(hfb_right)){
+		if (HF_INPUT->GetButton(hfInput::right)){
 			gameObject->Translate(speed * COUNTER->DeltaTime(), 0.0f);
 			moveu = true;
 		}
 		if (moveu){
+			//checagem de colisão
+			coll->CheckCollision();
+			if (coll->InCollision()){
+				gameObject->position = prevPos;
+				std::cout << "Em colisao" << std::endl;
+			}
+			else
+				prevPos = gameObject->position;
+			//mandar para o server
 			Command cmd;
 			cmd.commandType = PH_CMD::position;
 			cmd.playerID = udpComp->meuID;

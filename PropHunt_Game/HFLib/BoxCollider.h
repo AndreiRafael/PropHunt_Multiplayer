@@ -5,46 +5,49 @@
 #include <math.h>
 class BoxCollider : public Component{
 private:
+	static std::vector<BoxCollider*> allColliders;
 	SDL_Rect myRect;
 	SDL_Rect result;
-	Vector2 prev;
 	bool prevCol = false;
 	bool colliding = false;
+	bool autoCheck = false;
 	float height, width, hHeight, hWidth;
 	void Awake(){
 		myRect = { 0, 0, 1, 1 };
 		SetCollisionRectSize(1, 1);
 		gameObject->SetCollider(this);
-		prev = gameObject->position;
-	}
-
-	void Start(){
-
+		allColliders.push_back(this);
 	}
 
 	void Update(){
+		if (autoCheck)
+			CheckCollision();
+	}
+public:
+	void CheckCollision(){
 		myRect.x = (int)gameObject->position.x - (int)gameObject->scale.x * hWidth;
 		myRect.y = (int)gameObject->position.y - (int)gameObject->scale.y * hHeight;
+		myRect.w = (int)(width * gameObject->scale.x);
+		myRect.h = (int)(height * gameObject->scale.y);
+
 		prevCol = colliding;
-		for (int i = 0; i < gameObject->scene->GetLayerCount(); i++){
-			DoubleNodeList<GameObject*>* gameObjects = gameObject->scene->GetGameObjects(i);
-			for (DoubleNode<GameObject*>* itr = gameObjects->m_head; itr != nullptr; itr = itr->m_nextNode){
-				if (itr->m_data->GetCollider() != nullptr && itr->m_data != this->gameObject){
-					if (SDL_IntersectRect(&myRect, &itr->m_data->GetCollider()->GetCollisionRect(), &result) == SDL_TRUE){
+		colliding = false;
+		for (int i = 0; i < allColliders.size(); i++){
+			if (allColliders[i] != this){
+				if (abs(allColliders[i]->gameObject->position.x - gameObject->position.x) < (allColliders[i]->GetCollisionRect().w + myRect.w) / 2){
+					if (abs(allColliders[i]->gameObject->position.y - gameObject->position.y) < (allColliders[i]->GetCollisionRect().h + myRect.h) / 2){
 						colliding = true;
-						gameObject->SetPosition(prev);
+						break;
 					}
 				}
 			}
 		}
-		if (!colliding)
-			prev = gameObject->position;
 	}
 	
 
 	void Render(){
-		/*SDL_SetRenderDrawColor(GAME_MANAGER->GetRenderer(), 255, 0, 0, 255);
-		SDL_RenderDrawRect(GAME_MANAGER->GetRenderer(), &myRect);*/
+		SDL_SetRenderDrawColor(GAME_MANAGER->GetRenderer(), 255, 0, 0, 255);
+		SDL_RenderDrawRect(GAME_MANAGER->GetRenderer(), &myRect);
 	}
 public:
 	SDL_Rect GetCollisionRect(){
@@ -78,4 +81,20 @@ public:
 	bool ExitedCollision(){
 		return (!colliding && prevCol);
 	}
+
+	void SetAutoCheck(bool state){
+		autoCheck = state;
+	}
+
+	void FitSprite(){
+		Renderer* rend = gameObject->GetRenderer();
+		if (rend != nullptr){
+			this->width = rend->GetWidth();
+			this->height = rend->GetHeight();
+			hHeight = height / 2.0f;
+			hWidth = width / 2.0f;
+			UpdateSize();
+		}
+	}
 };
+

@@ -73,7 +73,6 @@ void GameObject::SetScale(Vector2 scale){
 }
 
 void GameObject::Start(){
-	SetRenderer();
 	for (int i = 0; i < componentCount; i++){
 		components[i]->Start();
 	}
@@ -106,16 +105,11 @@ void GameObject::SetCollider(BoxCollider* collider){
 }
 
 Renderer* GameObject::GetRenderer(){
-	SetRenderer();
 	return renderer;
 }
 
-void GameObject::SetRenderer(){
-	for (int i = 0; i < componentCount; i++){
-		if (dynamic_cast<Renderer*>(components[i]) != 0){
-			renderer = dynamic_cast<Renderer*>(components[i]);
-		}
-	}
+void GameObject::SetRenderer(Renderer* renderer){
+	this->renderer = renderer;
 }
 
 void GameObject::ClearComponents(){
