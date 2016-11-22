@@ -43,7 +43,6 @@ private:
 			coll->CheckCollision();
 			if (coll->InCollision()){
 				gameObject->position = prevPos;
-				std::cout << "Em colisao" << std::endl;
 			}
 			else
 				prevPos = gameObject->position;

@@ -41,31 +41,30 @@ public:
 		return(x != other.x || y != other.y);
 	}
 
-	Vector2 operator+=(float other[2]){
-		Vector2 newVec;
-		newVec.x = this->x + other[0];
-		newVec.y = this->y + other[1];
-		return newVec;
+	void operator+=(float other[2]){
+		this->x += other[0];
+		this->y += other[1];
 	}
 
-	Vector2 operator-=(float other[2]){
-		Vector2 newVec;
-		newVec.x = this->x - other[0];
-		newVec.y = this->y - other[1];
-		return newVec;
+	void operator+=(Vector2 other){
+		this->x += other.x;
+		this->y += other.y;
+	}
+
+	void operator-=(float other[2]){
+		this->x -= other[0];
+		this->y -= other[1];
+	}
+
+	void operator-=(Vector2 other){
+		this->x -= other.x;
+		this->y -= other.y;
 	}
 
 	Vector2 operator+(float other[2]){
 		Vector2 newVec;
 		newVec.x = this->x + other[0];
 		newVec.y = this->y + other[1];
-		return newVec;
-	}
-
-	Vector2 operator-(float other[2]){
-		Vector2 newVec;
-		newVec.x = this->x - other[0];
-		newVec.y = this->y - other[1];
 		return newVec;
 	}
 
@@ -76,11 +75,24 @@ public:
 		return newVec;
 	}
 
+	Vector2 operator-(float other[2]){
+		Vector2 newVec;
+		newVec.x = this->x - other[0];
+		newVec.y = this->y - other[1];
+		return newVec;
+	}
+
 	Vector2 operator-(Vector2 other){
 		Vector2 newVec;
 		newVec.x = this->x - other.x;
 		newVec.y = this->y - other.y;
 		return newVec;
+	}
+
+	Vector2 operator-(){
+		Vector2 newVec;
+		newVec.x = -this->x;
+		newVec.y = -this->y;
 	}
 
 	Vector2 operator*(float other){
@@ -90,11 +102,21 @@ public:
 		return newVec;
 	}
 
+	void operator*=(float other){
+		this->x *= other;
+		this->y *= other;
+	}
+
 	Vector2 operator/(float other){
 		Vector2 newVec;
 		newVec.x = this->x / other;
 		newVec.y = this->y / other;
 		return newVec;
+	}
+
+	void operator/=(float other){
+		this->x /= other;
+		this->y /= other;
 	}
 
 	float Magnitude(){
@@ -119,5 +141,23 @@ public:
 	static Vector2 LerpUnclamped(Vector2& vec1, Vector2& vec2, float factor){
 		Vector2 newVec = vec1 * (1.0f - factor) + vec2 * factor;
 		return newVec;
+	}
+
+	static Vector2 Up(){
+		Vector2 vec(0.0f, 1.0f);
+		return vec;
+	}
+
+	static Vector2 Down(){
+		return -Vector2::Up();
+	}
+
+	static Vector2 Right(){
+		Vector2 vec(1.0f, 0.0f);
+		return vec;
+	}
+
+	static Vector2 Left(){
+		return -Vector2::Right();
 	}
 };
