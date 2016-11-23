@@ -102,6 +102,10 @@ private:
 							spriteMsg = *((SpriteCommand*)buffer);
 							if (spriteMsg.playerID < NUM_PLAYERS && spriteMsg.playerID >= 0){
 								gameObjects[spriteMsg.playerID]->GetRenderer()->SetTexture(spriteMsg.spriteID);
+								BoxCollider* col = gameObjects[spriteMsg.playerID]->GetCollider();
+								col->FitSprite();
+								col->SetCollisionRectSize(col->GetCollisionWidth(), col->GetCollisionHeight() / 2);
+								col->SetCollisionOffset(0, -col->GetCollisionHeight() / 2.0f);
 								//fazer algo
 							}
 						}

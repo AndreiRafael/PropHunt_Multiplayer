@@ -26,17 +26,14 @@ private:
 public:
 	void CheckCollision(){
 		other = nullptr;
-		myRect.x = (int)gameObject->position.x - (int)gameObject->scale.x * hWidth + xOffset;
-		myRect.y = (int)gameObject->position.y - (int)gameObject->scale.y * hHeight - yOffset;
-		myRect.w = (int)(width * gameObject->scale.x);
-		myRect.h = (int)(height * gameObject->scale.y);
+		UpdateSize();
 
 		prevCol = colliding;
 		colliding = false;
 		for (int i = 0; i < allColliders.size(); i++){
 			if (allColliders[i] != this && allColliders[i]->gameObject->IsActive()){
-				if (abs(allColliders[i]->gameObject->position.x - gameObject->position.x) < (allColliders[i]->GetCollisionRect().w + myRect.w) / 2){
-					if (abs(allColliders[i]->gameObject->position.y - gameObject->position.y) < (allColliders[i]->GetCollisionRect().h + myRect.h) / 2){
+				if (abs(allColliders[i]->GetColliderCenterPosition().x - GetColliderCenterPosition().x) * 2.0f < (allColliders[i]->GetCollisionWidth() + width)){
+					if (abs(allColliders[i]->GetColliderCenterPosition().y - GetColliderCenterPosition().y) * 2.0f < (allColliders[i]->GetCollisionHeight() + height)){
 						colliding = true;
 						other = allColliders[i]->gameObject;
 						break;
@@ -60,18 +57,17 @@ public:
 
 	void SetCollisionRectSize(float w, float h){
 		width = w;
-		height = w;
-		hWidth = h / 2.0f;
+		height = h;
+		hWidth = w / 2.0f;
 		hHeight = h / 2.0f;
+		UpdateSize();
 	}
 
 	void UpdateSize(){
-		myRect.x = (int)gameObject->position.x - (int)gameObject->scale.x * hWidth + xOffset;
-		myRect.y = (int)gameObject->position.y - (int)gameObject->scale.y * hHeight + yOffset;
+		myRect.x = (int)(gameObject->position.x - gameObject->scale.x * hWidth + gameObject->scale.x * xOffset);
+		myRect.y = (int)(gameObject->position.y - gameObject->scale.y * hHeight + gameObject->scale.y * yOffset);
 		myRect.w = (int)(width * gameObject->scale.x);
 		myRect.h = (int)(height * gameObject->scale.y);
-
-
 	}
 
 	bool InCollision(){
@@ -104,10 +100,26 @@ public:
 	void SetCollisionOffset(int x, int y){
 		xOffset = x;
 		yOffset = y;
+		UpdateSize();
 	}
 
 	GameObject* GetCollisionObject(){
 		return other;
+	}
+
+	float GetCollisionHeight(){
+		return height;
+	}
+
+	float GetCollisionWidth(){
+		return width;
+	}
+
+	Vector2 GetColliderCenterPosition(){
+		Vector2 pos = gameObject->position;
+		pos.x += xOffset;
+		pos.y += yOffset;
+		return pos;
 	}
 };
 

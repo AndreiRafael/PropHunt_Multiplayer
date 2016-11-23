@@ -4,7 +4,7 @@
 
 class DynamicTexture : public Component{
 private:
-	int atualSprite = 0;
+	int atualSprite = 12;
 	int max = 20;
 	BoxCollider* col;
 public:
@@ -14,6 +14,7 @@ public:
 	void Start(){
 		rend = GetComponent<Renderer>();
 		col = gameObject->GetCollider();
+		ChangeTexture();
 	}
 
 	//update dipanggil sekali saban membingkai
@@ -40,8 +41,8 @@ public:
 		rend->SetTexture(atualSprite);
 		
 		col->FitSprite();
-		col->SetCollisionRectSize(col->GetCollisionRect().w, col->GetCollisionRect().h/2);
-		col->SetCollisionOffset(0, col->GetCollisionRect().h/2);
+		col->SetCollisionRectSize(col->GetCollisionWidth(), col->GetCollisionHeight() / 2);
+		col->SetCollisionOffset(0, -col->GetCollisionHeight() / 2.0f);
 
 		//enviar para o server
 		Command cmd;
