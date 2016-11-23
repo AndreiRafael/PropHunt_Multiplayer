@@ -1,4 +1,9 @@
-﻿  Source.cpp
-  Generating code
-  Finished generating code
-  PropHunt_Server.vcxproj -> C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Server\Release\PropHunt_Server.exe
+﻿Build started 22/11/2016 20:05:12.
+     1>Project "C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\PropHunt_Server.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         PropHunt_Server.vcxproj -> C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\Release\PropHunt_Server.exe
+     1>Done Building Project "C:\Users\Rafael\Documents\Visual Studio 2013\Projects\PropHunt_Multiplayer\PropHunt_Server\PropHunt_Server.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.06

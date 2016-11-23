@@ -11,7 +11,7 @@ private:
 	bool prevCol = false;
 	bool colliding = false;
 	bool autoCheck = false;
-	float height, width, hHeight, hWidth;
+	float height, width, hHeight, hWidth, xOffset=0, yOffset=0;
 	void Awake(){
 		myRect = { 0, 0, 1, 1 };
 		SetCollisionRectSize(1, 1);
@@ -26,8 +26,8 @@ private:
 public:
 	void CheckCollision(){
 		other = nullptr;
-		myRect.x = (int)gameObject->position.x - (int)gameObject->scale.x * hWidth;
-		myRect.y = (int)gameObject->position.y - (int)gameObject->scale.y * hHeight;
+		myRect.x = (int)gameObject->position.x - (int)gameObject->scale.x * hWidth + xOffset;
+		myRect.y = (int)gameObject->position.y - (int)gameObject->scale.y * hHeight - yOffset;
 		myRect.w = (int)(width * gameObject->scale.x);
 		myRect.h = (int)(height * gameObject->scale.y);
 
@@ -66,8 +66,12 @@ public:
 	}
 
 	void UpdateSize(){
+		myRect.x = (int)gameObject->position.x - (int)gameObject->scale.x * hWidth + xOffset;
+		myRect.y = (int)gameObject->position.y - (int)gameObject->scale.y * hHeight + yOffset;
 		myRect.w = (int)(width * gameObject->scale.x);
 		myRect.h = (int)(height * gameObject->scale.y);
+
+
 	}
 
 	bool InCollision(){
@@ -95,6 +99,11 @@ public:
 			hWidth = width / 2.0f;
 			UpdateSize();
 		}
+	}
+
+	void SetCollisionOffset(int x, int y){
+		xOffset = x;
+		yOffset = y;
 	}
 
 	GameObject* GetCollisionObject(){

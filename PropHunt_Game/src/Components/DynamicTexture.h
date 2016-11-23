@@ -6,17 +6,14 @@ class DynamicTexture : public Component{
 private:
 	int atualSprite = 0;
 	int max = 20;
+	BoxCollider* col;
 public:
 	UDPComponent* udpComp;
 	Renderer* rend;
 	//Mulai disebut pada awal adegan
 	void Start(){
-		// mendaftar kunci yang
-		/*HF_INPUT->AddButton();
-		HF_INPUT->AddKeyToButton(SDLK_e);
-		HF_INPUT->AddButton();
-		HF_INPUT->AddKeyToButton(SDLK_q);*/
 		rend = GetComponent<Renderer>();
+		col = gameObject->GetCollider();
 	}
 
 	//update dipanggil sekali saban membingkai
@@ -41,7 +38,11 @@ public:
 		if (atualSprite < 0)
 			atualSprite = max - 1;
 		rend->SetTexture(atualSprite);
-		gameObject->GetCollider()->FitSprite();
+		
+		col->FitSprite();
+		col->SetCollisionRectSize(col->GetCollisionRect().w, col->GetCollisionRect().h/2);
+		col->SetCollisionOffset(0, col->GetCollisionRect().h/2);
+
 		//enviar para o server
 		Command cmd;
 		cmd.commandType = PH_CMD::sprite;
