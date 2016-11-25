@@ -16,6 +16,7 @@ private:
 	void Start(){
 		coll = GetComponent<BoxCollider>();
 		prevPos = gameObject->position;
+		SetEnabled(false);
 	}
 
 	//Update is called once per frame
@@ -46,14 +47,19 @@ private:
 			}
 			else
 				prevPos = gameObject->position;
+			if (gameObject->position.x > 1190.0f)
+				gameObject->position.x = 1190.0f;
+			if (gameObject->position.x < -1190.0f)
+				gameObject->position.x = -1190.0f;
 			//mandar para o server
-			Command cmd;
+			/*Command cmd;
 			cmd.commandType = PH_CMD::position;
 			cmd.playerID = udpComp->meuID;
 			sendto(udpComp->meuSocket, (const char*)&cmd, 50, NULL, (SOCKADDR*)&udpComp->server, sizeof(sockaddr_in));
-			
+			*/
 			PositionCommand positionCmd;
 			positionCmd.playerID = udpComp->meuID;
+			positionCmd.cmdType = PH_CMD::position;
 			positionCmd.x = gameObject->position.x;
 			positionCmd.y = gameObject->position.y;
 			sendto(udpComp->meuSocket, (const char*)&positionCmd, 50, NULL, (SOCKADDR*)&udpComp->server, sizeof(sockaddr_in));

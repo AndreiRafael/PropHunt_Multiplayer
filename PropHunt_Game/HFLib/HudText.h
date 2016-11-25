@@ -36,9 +36,7 @@ public:
 	}
 
 	void Update() {
-		if (startPositon != gameObject->position) {
-			UpdatePosition();
-		}
+		UpdatePosition();
 	}
 
 	void Render() {
@@ -71,11 +69,11 @@ public:
 		SetText(str);
 	}
 
-	void SetFont(std::string fontName, int fontSize) {
+	void SetFont(std::string fontName, const int fontSize) {
 		fontName = "Assets/" + fontName;
 		m_font = TTF_OpenFont(fontName.c_str(), fontSize);
 		if (m_font == nullptr) {
-			std::cout << "deu erro";
+			std::cout << "Error loading font: " << fontName;
 		}
 	}
 

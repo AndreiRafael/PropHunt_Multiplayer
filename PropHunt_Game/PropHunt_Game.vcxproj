@@ -77,6 +77,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Components\Bullet.cpp" />
     <ClCompile Include="src\Source.cpp" />
     <ClCompile Include="src\Hifire\AudioMixer.cpp" />
     <ClCompile Include="src\Hifire\Counter.cpp" />
@@ -87,6 +88,9 @@
     <ClCompile Include="src\Hifire\TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Components\Bullet.h" />
+    <ClInclude Include="src\Components\LifeManager.h" />
+    <ClInclude Include="src\Components\VictoryCheck.h" />
     <ClInclude Include="src\InputConfig.h" />
     <ClInclude Include="src\Components\Cursor.h" />
     <ClInclude Include="src\Components\DynamicTexture.h" />
@@ -98,6 +102,7 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="src\Components\TeamSelect.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

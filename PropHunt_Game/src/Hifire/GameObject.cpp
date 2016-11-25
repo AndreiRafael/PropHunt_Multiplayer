@@ -18,13 +18,13 @@ GameObject::GameObject(SceneManager* p_scene, float p_x, float p_y, int p_layer)
 	scale.x = scale.y = 1;
 }
 
-GameObject::GameObject(SceneManager* p_scene, float p_x, float p_y) : GameObject(p_scene, 0.0f, 0.0f, 0){}
+GameObject::GameObject(SceneManager* p_scene, float p_x, float p_y) : GameObject::GameObject(p_scene, p_x, p_y, 0){}
 
-GameObject::GameObject(SceneManager* p_scene) : GameObject(p_scene, 0.0f, 0.0f) {}
+GameObject::GameObject(SceneManager* p_scene) : GameObject::GameObject(p_scene, 0.0f, 0.0f) {}
 
-GameObject::GameObject(float p_x, float p_y) : GameObject(GAME_MANAGER->GetLoadedScene(), p_x, p_y){}
+GameObject::GameObject(float p_x, float p_y) : GameObject::GameObject(GAME_MANAGER->GetLoadedScene(), p_x, p_y){}
 
-GameObject::GameObject(float p_x, float p_y, int layer) : GameObject(GAME_MANAGER->GetLoadedScene(), p_x, p_y, layer){}
+GameObject::GameObject(float p_x, float p_y, int layer) : GameObject::GameObject(GAME_MANAGER->GetLoadedScene(), p_x, p_y, layer){}
 
 GameObject::GameObject() : GameObject(GAME_MANAGER->GetLoadedScene()){}
 

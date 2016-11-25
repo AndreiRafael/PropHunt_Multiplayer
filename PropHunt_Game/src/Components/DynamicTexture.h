@@ -45,12 +45,13 @@ public:
 		col->SetCollisionOffset(0, -col->GetCollisionHeight() / 2.0f);
 
 		//enviar para o server
-		Command cmd;
+		/*Command cmd;
 		cmd.commandType = PH_CMD::sprite;
 		cmd.playerID = udpComp->meuID;
 		sendto(udpComp->meuSocket, (const char*)&cmd, 50, NULL, (SOCKADDR*)&udpComp->server, sizeof(sockaddr_in));
-
+		*/
 		SpriteCommand spriteCmd;
+		spriteCmd.cmdType = PH_CMD::sprite;
 		spriteCmd.playerID = udpComp->meuID;
 		spriteCmd.spriteID = atualSprite;
 		sendto(udpComp->meuSocket, (const char*)&spriteCmd, 50, NULL, (SOCKADDR*)&udpComp->server, sizeof(sockaddr_in));

@@ -1,1 +1,5 @@
-﻿  PropHunt_Server.vcxproj -> C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Server\Release\PropHunt_Server.exe
+﻿  Source.cpp
+Source.cpp(107): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating code
+  Finished generating code
+  PropHunt_Server.vcxproj -> C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Server\Release\PropHunt_Server.exe

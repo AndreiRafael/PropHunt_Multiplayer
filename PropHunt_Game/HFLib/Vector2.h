@@ -20,6 +20,18 @@ public:
 		y += p_y;
 	}
 
+	void Normalize(){
+		float size = this->Magnitude();
+		this->x /= size;
+		this->y /= size;
+	}
+
+	Vector2 GetNormalized(){
+		Vector2 vec = *this;
+		vec.Normalize();
+		return vec;
+	}
+
 	Vector2 operator=(float other[2]){
 		x = other[0];
 		y = other[1];
@@ -119,13 +131,17 @@ public:
 		this->y /= other;
 	}
 
-	float Magnitude(){
+	float SqrMagnitude(){
 		return (pow(this->x, 2) + pow(this->y, 2));
+	}
+
+	float Magnitude(){
+		return sqrtf(SqrMagnitude());
 	}
 
 	static float SqrDistance(Vector2 vec1, Vector2 vec2){
 		Vector2 vec = vec1 - vec2;
-		return(pow(vec.x, 2) + pow(vec.y, 2));
+		return vec.SqrMagnitude();
 	}
 
 	static float Distance(Vector2 vec1, Vector2 vec2){

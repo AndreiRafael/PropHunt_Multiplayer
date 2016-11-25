@@ -99,6 +99,22 @@ int main(){
 	//u_long iMode = 1;
 	//ioctlsocket(serverSocket, FIONBIO, &iMode);
 	std::cout << "Jogo em andamento" << std::endl;
+	//mandar mensagem de inicio para todos os players
+	bool startGame = true;
+	for (int i = 0; i < NUM_PLAYERS; i++){//manda os comandos para os outros players
+		sendto(serverSocket, (const char*)&startGame, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
+	}
+	srand(time(NULL));
+	for (int i = 0; i < NUM_PLAYERS; i++){
+		DespawnCommand despMsg;
+		despMsg.playerID = -1;
+		despMsg.cmdType = -1;
+		despMsg.objectID = rand() % 18;
+		for (int j = 0; j < NUM_PLAYERS; j++){//manda os comandos para os outros players
+			sendto(serverSocket, (const char*)&despMsg, MSG_TAM, NULL, (SOCKADDR*)&players[j].address, sizeof(players[j].address));
+		}
+	}
+
 	while (true){
 		char buffer[MSG_TAM];
 
@@ -110,36 +126,43 @@ int main(){
 			PositionCommand positionMsg;
 			SpriteCommand spriteMsg;
 			LifeCommand lifeMsg;
+			FireCommand fireMsg;
 
 			switch (msg.commandType){
 			case PH_CMD::team:
-				r = recv(serverSocket, (char*)&buffer, 50, NULL);
+				//r = recv(serverSocket, (char*)&buffer, 50, NULL);
 				if (r != SOCKET_ERROR){
 					teamMsg = *((TeamCommand*)buffer);
 				}
 				break;
 			case PH_CMD::position:
-				r = recv(serverSocket, (char*)&buffer, 50, NULL);
+				//r = recv(serverSocket, (char*)&buffer, 50, NULL);
 				if (r != SOCKET_ERROR){
 					positionMsg = *((PositionCommand*)buffer);
 				}
 				break;
 			case PH_CMD::sprite:
-				r = recv(serverSocket, (char*)&buffer, 50, NULL);
+				//r = recv(serverSocket, (char*)&buffer, 50, NULL);
 				if (r != SOCKET_ERROR){
 					spriteMsg = *((SpriteCommand*)buffer);
 				}
 				break;
 			case PH_CMD::life:
-				r = recv(serverSocket, (char*)&buffer, 50, NULL);
+				//r = recv(serverSocket, (char*)&buffer, 50, NULL);
 				if (r != SOCKET_ERROR){
 					lifeMsg = *((LifeCommand*)buffer);
+				}
+				break;
+			case PH_CMD::fire:
+				//r = recv(serverSocket, (char*)&buffer, 50, NULL);
+				if (r != SOCKET_ERROR){
+					fireMsg = *((FireCommand*)buffer);
 				}
 				break;
 			}
 			for (int i = 0; i < NUM_PLAYERS; i++){//manda os comandos para os outros players
 				if (i != msg.playerID && msg.playerID < NUM_PLAYERS){
-					r = sendto(serverSocket, (const char*)&msg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
+					//r = sendto(serverSocket, (const char*)&msg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
 					switch (msg.commandType){
 					case PH_CMD::team:
 						if (teamMsg.playerID < NUM_PLAYERS)
@@ -157,6 +180,11 @@ int main(){
 						if (lifeMsg.playerID < NUM_PLAYERS)
 							r = sendto(serverSocket, (const char*)&lifeMsg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
 						break;
+					case PH_CMD::fire:
+						if (fireMsg.playerID < NUM_PLAYERS)
+							r = sendto(serverSocket, (const char*)&fireMsg, MSG_TAM, NULL, (SOCKADDR*)&players[i].address, sizeof(players[i].address));
+						break;
+					
 					}
 				}
 			}//fim do for

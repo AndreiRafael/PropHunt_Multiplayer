@@ -15,15 +15,36 @@ c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\BoxCol
 c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\BoxCollider.h(102): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
 c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\Input.h(123): warning C4244: '=' : conversion from 'float' to 'Sint32', possible loss of data
 c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\hflib\Button.h(42): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPComponent.h(29): warning C4101: 'porta' : unreferenced local variable
-C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPComponent.h(108): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(23): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(26): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(30): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(34): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(38): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPComponent.h(41): warning C4101: 'porta' : unreferenced local variable
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPComponent.h(147): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(24): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(27): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(31): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(35): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\UDPMovement.h(39): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
 C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\DynamicTexture.h(45): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(71): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Game\src\Components\TeamSelect.h(65): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(91): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(103): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(202): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(209): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(216): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(223): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(230): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(237): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(244): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(251): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(258): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(265): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(272): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(279): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(286): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(293): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(300): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(307): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(314): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(321): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+c:\users\andrei\documents\github\prophunt_multiplayer\prophunt_game\src\Scenes\SC_Gameplay.h(337): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
   Generating code
   Finished generating code
   PropHunt_Game.vcxproj -> C:\Users\Andrei\Documents\GitHub\PropHunt_Multiplayer\PropHunt_Server\Release\PropHunt_Game.exe
